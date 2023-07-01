@@ -1,0 +1,34 @@
+Interview Questions on Arrays and Strings in JavaScript:
+
+What are arrays in JavaScript? How do they differ from other programming languages?
+How would you add an element to the end of an array? How about the beginning?
+What is the difference between push() and unshift() methods in JavaScript arrays?
+Can you explain what is splice() and slice() methods in JavaScript arrays and their differences?
+How would you remove an element from the end of an array? And how about from the beginning?
+How can you iterate over an array in JavaScript? Can you show an example?
+Explain the map() method in JavaScript arrays. How does it work and when should you use it?
+What is the difference between map() and forEach() in JavaScript arrays?
+Can you explain the filter() method in JavaScript arrays? What are some use cases?
+How can you sort an array in JavaScript? What happens if the array contains both numbers and strings?
+Can you explain what reduce() method does in JavaScript?
+What is string interpolation in JavaScript? Can you provide an example?
+How can you convert a string to an array in JavaScript?
+How can you convert an array to a string in JavaScript?
+What are template literals in JavaScript? How do they help with working on strings?
+Practical Questions on Arrays and Strings in JavaScript:
+
+Write a function to reverse a string in JavaScript.
+Write a function that takes an array of numbers and returns a new array containing only the even numbers.
+Write a JavaScript function to check whether an input is an array or not.
+Write a function that takes two strings as input and returns true if they are anagrams (contain the same characters) and false otherwise.
+Write a function that takes a string and returns the same string but with all vowels removed.
+Write a function to flatten an array in JavaScript. For example, flatten([1, [2, 3], [4, [5, 6]]]) should return [1, 2, 3, 4, 5, 6].
+Write a function that finds the most frequent element in an array.
+Implement a function to perform a binary search on a sorted array.
+Write a function that splits a string into an array of words. For example, "Hello World" should be split into ["Hello", "World"].
+Write a function that capitalizes the first letter of each word in a string. For example, "hello world" should become "Hello World".
+Write a function to find the longest string in an array of strings.
+Implement a function that reverses the words in a sentence but keeps the order of the words the same.
+Write a function that checks if a given string is a palindrome or not.
+Write a function that takes a string and a character, and splits the string into an array of strings by the character.
+Write a function that counts the number of occurrences of a value in an array. For example, for the array [1, 2, 3, 1, 2, 1] and value 1, the function should return 3.
