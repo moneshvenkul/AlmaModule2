@@ -1,0 +1,516 @@
+// // let str = "hello123"
+
+// // let regex = /hello(?=\d+)/
+
+// // let result = regex.exec(str)
+
+
+// // console.log(result)
+
+
+// // let str = "helloskudhg"
+
+// // let regex = /hello(?!\d+)/
+
+// // let result = regex.exec(str)
+
+
+// // console.log(result)
+
+
+
+// //  5,6,7,8,4,2,1,4,7,5,8,9,6,3,2,1
+
+// // Traditional Solution
+// // function findMaxElement(arr) {
+
+// //     if (arr.length === 0) {
+// //         return "Please enter numbers";
+// //       }
+    
+// //     let max = arr[0];
+// //     for (let i = 1; i < arr.length; i++) {
+// //       if (arr[i] > max) {
+// //         max = arr[i]; //8
+// //       }
+// //     }
+// //     return max;
+// //   }
+  
+// //   console.log(findMaxElement([]));
+
+
+
+// function reverseArray(arr) {
+//     let start = 0;
+//     let end = arr.length - 1;
+//     while (start < end) {
+//     [arr[start], arr[end]] = [arr[end], arr[start]];
+//       start++;
+//       end--;
+//     }
+//     return arr;
+//   }
+  
+//   console.log(reverseArray([3, 6, 8, 1, 4, 9, 5]));
+
+
+// function findSecondSmallest(arr) {
+//     const sortedArr = arr.sort((a, b) => a - b); // Sort the array in ascending order
+//     const uniqueArr = [...new Set(sortedArr)]; // Remove duplicates by creating a new array
+//     if (uniqueArr.length < 2) {
+//       return undefined; // Handle the case when there are less than two unique elements in the array
+//     }
+//     return uniqueArr[1]; // Return the second element in the sorted, unique array
+//   }
+  
+//   console.log(findSecondSmallest([3, 6, 8, 4, 9, 5]));
+
+//   3,4,5,6,8,9
+//   3,4,5,6,8,9  //4
+
+
+
+
+// function findSecondSmallest(arr) {
+//     let smallest = Infinity;
+//     let secondSmallest = Infinity;
+  
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] < smallest) {
+//         secondSmallest = smallest;
+//         smallest = arr[i];
+//       } else if (arr[i] < secondSmallest && arr[i] !== smallest) {
+//         secondSmallest = arr[i];
+//       }
+//     }
+  
+//     if (secondSmallest === Infinity) {
+//       return undefined; // Handle the case when there is no second smallest element
+//     }
+  
+//     return secondSmallest;
+//   }
+  
+//   console.log(findSecondSmallest([3, 6, 8, 4, 9, 5]));
+
+
+
+// function findIntersection(arr1, arr2) {
+//     const intersection = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//       for (let j = 0; j < arr2.length; j++) {
+//         if (arr1[i] === arr2[j] && !intersection.includes(arr1[i])) {
+//           intersection.push(arr1[i]);
+//         }
+//       }
+//     }
+//     return intersection;
+//   }
+  
+//   const arr1 = [1, 2, 3, 4, 5];
+//   const arr2 = [4, 5, 6, 7, 8];
+//   console.log(findIntersection(arr1, arr2));
+
+// function findIntersection(arr1, arr2) {
+//     const set1 = new Set(arr1); // Create a set from arr1
+  
+//     const intersection = [];
+  
+//     for (let i = 0; i < arr2.length; i++) {
+//       if (set1.has(arr2[i])) {
+//         intersection.push(arr2[i]);
+//         set1.delete(arr2[i]); // Remove the element from set1 to handle duplicates
+//       }
+//     }
+  
+//     return intersection;
+//   }
+  
+//   const arr1 = [1, 2, 3, 4, 5];
+//   const arr2 = [4, 5, 6, 7, 8];
+//   console.log(findIntersection(arr1, arr2));
+
+
+
+
+// function longestSubstringWithoutRepeatingChars(str) {
+//     let longest = '';
+//     for (let i = 0; i < str.length; i++) {
+//       let substring = '';
+//       for (let j = i; j < str.length; j++) {
+//         if (substring.includes(str[j])) {
+//           break;
+//         }
+//         substring += str[j];
+//       }
+//       if (substring.length > longest.length) {
+//         longest = substring;
+//       }
+//     }
+//     return longest;
+//   }
+  
+//   console.log(longestSubstringWithoutRepeatingChars("abcdbcbb"));
+
+
+// function longestSubstringWithoutRepeatingChars(str) {
+//     let longest = '';
+//     let start = 0;
+//     let charMap = new Map();
+//     for (let end = 0; end < str.length; end++) {
+//       if (charMap.has(str[end])) {
+//         start = Math.max(start, charMap.get(str[end]) + 1);
+//       }
+//       charMap.set(str[end], end);
+//       let substring = str.slice(start, end + 1);
+//       if (substring.length > longest.length) {
+//         longest = substring;
+//       }
+//     }
+//     return longest;
+//   }
+  
+//   console.log(longestSubstringWithoutRepeatingChars("abcdbcbb"));
+
+
+
+// function findSecondSmallest(arr) {
+//   let smallest = Infinity;
+//   let secondSmallest = Infinity;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] < smallest) {
+//       secondSmallest = smallest;
+//       smallest = arr[i];
+//     } else if (arr[i] < secondSmallest && arr[i] !== smallest) {
+//       secondSmallest = arr[i];
+//     }
+//   }
+
+//   if (secondSmallest === Infinity) {
+//     return undefined; // Handle the case when there is no second smallest element
+//   }
+
+//   return secondSmallest;
+// }
+
+// console.log(findSecondSmallest([3, 6, 8, 4, 9, 5]));
+
+
+// function longestSubstringWithoutRepeatingChars(str) {
+//   let longest = '';
+//   let start = 0;
+//   let charMap = new Map();
+//   for (let end = 0; end < str.length; end++) {
+//     if (charMap.has(str[end])) {
+//       start = Math.max(start, charMap.get(str[end]) + 1);
+//     }
+//     charMap.set(str[end], end);
+//     let substring = str.slice(start, end + 1);
+//     if (substring.length > longest.length) {
+//       longest = substring;
+//     }
+//   }
+//   return longest;
+// }
+
+// console.log(longestSubstringWithoutRepeatingChars("abcdbcbb"));
+
+
+// function firstNonRepeatingChar(str) {
+//   for (let i = 0; i < str.length; i++) {
+//     let isRepeated = false;
+//     for (let j = 0; j < str.length; j++) {
+//       if (i !== j && str[i] === str[j]) {
+//         isRepeated = true;
+//         break;
+//       }
+//     }
+//     if (!isRepeated) {
+//       return str[i];
+//     }
+//   }
+//   return null;
+// }
+
+// console.log(firstNonRepeatingChar("lovealmario"));
+
+// function firstNonRepeatingChar(str) {
+//   const charCount = new Map();
+//   for (let char of str) {
+//     charCount.set(char, (charCount.get(char) || 0) + 1);
+//   }
+//   for (let char of str) {
+//     if (charCount.get(char) === 1) {
+//       return char;
+//     }
+//   }
+//   return null;
+// }
+
+// console.log(firstNonRepeatingChar("lovealmario"));
+
+// function longestPalindromicSubstring(str) {
+//   let longest = '';
+//   for (let i = 0; i < str.length; i++) {
+//     for (let j = i; j < str.length; j++) {
+//       let substring = str.substring(i, j + 1);
+//       if (isPalindrome(substring) && substring.length > longest.length) {
+//         longest = substring;
+//       }
+//     }
+//   }
+//   return longest;
+// }
+
+// function isPalindrome(str) {
+//   return str === str.split('').reverse().join('');
+// }
+
+
+// console.log(longestPalindromicSubstring("babad"));
+
+
+// function longestPalindromicSubstring(str) {
+//   let longest = '';
+//   for (let i = 0; i < str.length; i++) {
+//     let oddPalindrome = expandAroundCenter(str, i, i);
+//     let evenPalindrome = expandAroundCenter(str, i, i + 1);
+//     let currLongest = oddPalindrome.length > evenPalindrome.length ? oddPalindrome : evenPalindrome;
+//     if (currLongest.length > longest.length) {
+//       longest = currLongest;
+//     }
+//   }
+//   return longest;
+// }
+
+// function expandAroundCenter(str, left, right) {
+//   while (left >= 0 && right < str.length && str[left] === str[right]) {
+//     left--;
+//     right++;
+//   }
+//   return str.substring(left + 1, right);
+// }
+
+// console.log(longestPalindromicSubstring("babad"));
+
+
+// function isAnagram(s, t) {
+//   if (s.length !== t.length) {
+//     return false;
+//   }
+//   const sortedS = s.split("").sort().join("");  //traingle => t r i a n g l e => a e g i l n r t
+//   const sortedT = t.split("").sort().join("");  //integral => i n t e g r a l => a e g i l n r t
+//   return sortedS === sortedT;
+// }
+
+// console.log(isAnagram("triangle", "integral"));
+
+
+// function isAnagram(s, t) {
+//   if (s.length !== t.length) {
+//     return false;
+//   }
+//   const charCount = {};
+//   for (let char of s) {
+//     charCount[char] = charCount[char] ? charCount[char] + 1 : 1;
+//   }
+//   for (let char of t) {
+//     if (!charCount[char]) {
+//       return false;
+//     }
+//     charCount[char]--;
+//   }
+//   return true;
+// }
+
+// console.log(isAnagram("triangle", "integral"))
+
+
+
+// function patternMatching(pattern, str) {
+//   const patternLength = pattern.length;
+//   const strLength = str.length;
+//   if (patternLength === 0 && strLength === 0) {
+//     return true;
+//   }
+//   if (patternLength === 0 || strLength === 0) {
+//     return false;
+//   }
+//   const patternArr = pattern.split("");
+//   const strArr = str.split(" ");
+//   if (patternArr.length !== strArr.length) {
+//     return false;
+//   }
+//   const patternMap = new Map();
+//   const strSet = new Set();
+//   for (let i = 0; i < patternLength; i++) {
+//     const char = patternArr[i]; //a
+//     const word = strArr[i];  //dog               
+//     if (!patternMap.has(char) && !strSet.has(word)) {
+//       patternMap.set(char, word);
+//       strSet.add(word);
+//     } else {
+//       if (patternMap.get(char) !== word) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(patternMatching("abba", "dog cat cat dog"));
+
+
+
+// function patternMatching(pattern, str) {
+//   const patternLength = pattern.length;
+//   const strArr = str.split(" ");
+//   if (patternLength !== strArr.length) {
+//     return false;
+//   }
+//   const patternMap = new Map();
+//   const strSet = new Set();
+//   for (let i = 0; i < patternLength; i++) {
+//     const char = pattern[i];
+//     const word = strArr[i];
+//     if (!patternMap.has(char) && !strSet.has(word)) {
+//       patternMap.set(char, word);
+//       strSet.add(word);
+//     } else {
+//       if (patternMap.get(char) !== word) {
+//         return false;
+//       }
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(patternMatching("abba", "dog cat cat dog"));
+
+
+// function patternMatching(text, pattern) {
+//   const n = text.length;
+//   const m = pattern.length;
+//   const occurrences = [];
+//   for (let i = 0; i <= n - m; i++) {
+//     let j = 0;
+//     while (j < m) {
+//       if (text[i + j] !== pattern[j]) {
+//         break;
+//       }
+//       j++;
+//     }
+//     if (j === m) {
+//       occurrences.push(i);
+//     }
+//   }
+//   return occurrences;
+// }
+
+// console.log(patternMatching("abababab", "aba"));
+
+
+// function patternMatching(text, pattern) {
+//   const n = text.length;
+//   const m = pattern.length;
+//   const occurrences = [];
+//   let i = 0;
+//   while (i <= n - m) {
+//     let j = 0;
+//     while (j < m && text[i + j] === pattern[j]) {
+//       j++;
+//     }
+//     if (j === m) {
+//       occurrences.push(i);
+//       i += m - 1;
+//     } else {
+//       i++;
+//     }
+//   }
+//   return occurrences;
+// }
+
+// console.log(patternMatching("abababab", "aba"));
+
+// function countOccurrences(text, pattern) {
+//   const n = text.length;
+//   const m = pattern.length;
+//   let count = 0;
+//   for (let i = 0; i <= n - m; i++) {
+//     let j = 0;
+//     while (j < m) {
+//       if (text[i + j] !== pattern[j]) {
+//         break;
+//       }
+//       j++;
+//     }
+//     if (j === m) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countOccurrences("Hello, Hello, world!", "Hello"));
+
+//Hello, Hello, world!
+
+//Hello
+
+//count = 2
+
+
+// function countOccurrences(text, pattern) {
+//   const n = text.length;
+//   const m = pattern.length;
+//   let count = 0;
+//   let i = 0;
+//   while (i <= n - m) {
+//     let j = 0;
+//     while (j < m && text[i + j] === pattern[j]) {
+//       j++;
+//     }
+//     if (j === m) {
+//       count++;
+//       i += m - 1;
+//     } else {
+//       i++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countOccurrences("Hello, Hello, world!", "Hello"));
+
+
+// function patternReplace(text, pattern, replacement) {
+//   let result = '';
+//   const n = text.length;
+//   const m = pattern.length;
+//   let i = 0;
+//   while (i <= n - m) {
+//     let j = 0;
+//     while (j < m && text[i + j] === pattern[j]) {
+//       j++;
+//     }
+//     if (j === m) {
+//       result += replacement;
+//       i += m;
+//     } else {
+//       result += text[i];
+//       i++;
+//     }
+//   }
+//   return result + text.slice(i);
+// }
+
+// console.log(patternReplace("abababab", "aba", "xyz"));
+
+
+function patternReplace(text, pattern, replacement) {
+  return text.replace(new RegExp(pattern,g), replacement);
+}
+
+console.log(patternReplace("abababab", "aba", "xyz"));
