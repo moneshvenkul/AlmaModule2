@@ -32,3 +32,188 @@ Implement a function that reverses the words in a sentence but keeps the order o
 Write a function that checks if a given string is a palindrome or not.
 Write a function that takes a string and a character, and splits the string into an array of strings by the character.
 Write a function that counts the number of occurrences of a value in an array. For example, for the array [1, 2, 3, 1, 2, 1] and value 1, the function should return 3.
+
+
+Answers:
+
+
+Theory Questions on Arrays and Strings in JavaScript:
+
+JavaScript arrays are dynamic collections of various data types. They can store different types of values - numbers, strings, objects, even other arrays. This is different from many other languages where arrays must contain elements of the same type. They can also grow and shrink dynamically, whereas in some languages the size of the array must be set at the time of creation.
+
+To add an element to the end of an array, you would use the push() method. For adding to the beginning, you would use the unshift() method.
+
+push() adds one or more elements to the end of an array and returns the new length of the array. unshift() adds one or more elements to the beginning of an array and returns the new length.
+
+splice() changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. slice() returns a shallow copy of a portion of an array into a new array object. The main difference is that splice() modifies the original array, while slice() does not.
+
+To remove an element from the end of an array, you would use the pop() method. For removing from the beginning, you would use the shift() method.
+
+You can iterate over an array in JavaScript using several methods including a for loop, a forEach() method, a for...of loop, or a map() function. For example:
+
+let arr = [1, 2, 3, 4, 5];
+arr.forEach(function(item) {
+   console.log(item);
+});
+
+The map() method in JavaScript creates a new array by calling a function on every element in the array. It's often used when you want to create a new array from an existing one, transforming the elements in some way.
+
+Both map() and forEach() are used to iterate through the elements in a JavaScript array. The key difference is that map() returns a new array based on what is returned from the function, while forEach() doesn't return anything (undefined).
+
+filter() creates a new array with all elements that pass the test implemented by the provided function. For example, it can be used to create a new array from a set of data where only entries that meet certain criteria are included.
+
+You can sort an array in JavaScript using the sort() function. However, if the array contains both numbers and strings, JavaScript will convert everything to strings and perform a lexicographical sort, which may not give you the results you expect.
+
+reduce() is a powerful method in JavaScript that allows you to reduce all of the values in an array into a single value. It works by calling a function on each element in the array, from left to right, and reducing the results to a single value.
+
+String interpolation is a process substituting values of variables into placeholders in a string. For example, in JavaScript, you can do this with template literals:
+
+let name = 'Alice';
+console.log(`Hello, ${name}!`); // Outputs: Hello, Alice!
+
+You can convert a string to an array in JavaScript using the split() method. For example:
+
+let str = "Hello World";
+let arr = str.split(" "); // Outputs: ['Hello', 'World']
+
+To convert an array to a string in JavaScript, you can use the join() method:
+
+let arr = ['Hello', 'World'];
+let str = arr.join(" "); // Outputs: "Hello World"
+
+
+Template literals are string literals that allow embedded expressions. They help with working on strings by allowing you to insert variables and expressions directly into a string using ${...} syntax, and they also support multi-line strings.
+
+Practical Questions on Arrays and Strings in Javascript :
+
+Reverse a string:
+
+
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+Return only the even numbers from an array:
+
+
+
+function getEvenNumbers(arr) {
+    return arr.filter(num => num % 2 === 0);
+}
+Check if an input is an array:
+
+
+
+function isArray(input) {
+    return Array.isArray(input);
+}
+Check if two strings are anagrams:
+
+
+
+function areAnagrams(str1, str2) {
+    let sortedStr1 = str1.split('').sort().join('');
+    let sortedStr2 = str2.split('').sort().join('');
+    return sortedStr1 === sortedStr2;
+}
+Remove vowels from a string:
+
+
+
+function removeVowels(str) {
+    return str.replace(/[aeiou]/gi, '');
+}
+Flatten an array:
+
+
+
+function flatten(arr) {
+    return arr.flat(Infinity);
+}
+Find the most frequent element in an array:
+
+
+
+function mostFrequent(arr) {
+    let counts = {};
+    let max = 0;
+    let mostFrequent;
+    arr.forEach(function(x) {
+        counts[x] = (counts[x] || 0)+1;
+        if(counts[x] > max) {
+            max = counts[x];
+            mostFrequent = x;
+        }
+    });
+    return mostFrequent;
+}
+Perform a binary search on a sorted array:
+
+
+
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (arr[mid] === target) {
+            return mid;
+        }
+        if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+Split a string into an array of words:
+
+
+
+function splitIntoWords(str) {
+    return str.split(' ');
+}
+Capitalize the first letter of each word:
+
+
+
+function capitalizeWords(str) {
+    return str.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+Find the longest string in an array of strings:
+
+
+
+function findLongestString(arr) {
+    return arr.reduce((a, b) => a.length > b.length ? a : b);
+}
+Reverse the words in a sentence:
+
+
+
+function reverseWordsInSentence(str) {
+    return str.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+}
+Check if a string is a palindrome:
+
+
+
+function isPalindrome(str) {
+    let reversedStr = str.split('').reverse().join('');
+    return str === reversedStr;
+}
+Split a string by a character into an array of strings:
+
+
+
+function splitString(str, char) {
+    return str.split(char);
+}
+Count the number of occurrences of a value in an array:
+
+
+
+function countOccurrences(arr, value) {
+    return arr.filter(x => x === value).length;
+}
