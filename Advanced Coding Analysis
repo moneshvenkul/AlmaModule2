@@ -514,3 +514,69 @@ function patternReplace(text, pattern, replacement) {
 }
 
 console.log(patternReplace("abababab", "aba", "xyz"));
+
+
+
+
+
+Find the maximum element in an array.
+Traditional Solution
+Optimized Solution
+
+
+Reverse an array in-place.
+Traditional Solution
+Optimized Solution
+
+
+Find the second smallest element in an array
+Traditional Solution
+Optimized Solution
+
+
+Merge two sorted arrays into a single sorted array
+Traditional Solution
+Optimized Solution
+
+
+Find the longest substring without repeating characters.
+Traditional Solution
+Optimized Solution
+
+
+Find the first non-repeating character in it.
+Traditional Solution
+Optimized Solution
+
+
+Find the length of the longest palindromic substring.
+Traditional Solution
+Optimized Solution
+
+
+Determine if 2nd string is an anagram of 1st string.
+Traditional Solution
+Optimized Solution
+
+
+Check if a String Matches a Pattern
+Traditional Solution
+Optimized Solution
+
+
+Implement a function to find all occurrences of the pattern in the text.
+Traditional Solution
+Optimized Solution
+
+
+Count the number of occurrences of the pattern in the text.
+Traditional Solution
+Optimized Solution
+
+
+Replace all occurrences of the pattern in the text with a given replacement string.
+Traditional Solution
+Optimized Solution
+
+
+
