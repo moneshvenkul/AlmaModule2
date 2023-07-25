@@ -1,0 +1,55 @@
+Theoretical Questions:
+
+Explain the concept of algorithm analysis. Why is it important in JavaScript?
+Discuss time complexity and space complexity in JavaScript. How are they different and why are they important?
+What is Big O notation? Why is it significant in algorithm analysis?
+How can you optimize the performance of algorithms in JavaScript?
+Describe the divide and conquer strategy in algorithm design. Can you provide an example in JavaScript?
+Discuss how the greedy method works in algorithm design. Can you provide an example in JavaScript?
+Explain the concept of recursion in JavaScript. How does it relate to algorithms?
+What is the difference between breadth-first search and depth-first search algorithms? Can you use them in JavaScript?
+Explain the difference between synchronous and asynchronous programming in JavaScript. How does this affect algorithm design?
+How does JavaScript handle sorting algorithms? Discuss the efficiency of different sorting algorithms in JavaScript.
+Describe the dynamic programming strategy in algorithm design. Can you provide an example in JavaScript?
+How do you implement data structures like arrays, linked lists, stacks, queues, trees, and graphs in JavaScript? How do these affect algorithm design?
+What are closures in JavaScript? How can they be used in designing algorithms?
+How is an algorithm used in a callback function in JavaScript?
+Discuss the 'promises' concept in JavaScript. How does it relate to algorithm design?
+Explain the difference between iterative and recursive algorithms. Which one is more efficient in JavaScript?
+Describe how garbage collection works in JavaScript. How does it affect the space complexity of an algorithm?
+What is 'Hoisting' in JavaScript and how does it affect the way you design algorithms?
+What is AJAX? How can it affect the design and execution of algorithms in JavaScript?
+Discuss different search algorithms. How can they be implemented in JavaScript?
+How is algorithm efficiency impacted by JavaScript's single-threaded nature?
+Explain the concept of memoization in JavaScript. How does it improve algorithm efficiency?
+How can you implement graph algorithms in JavaScript?
+How can you implement tree traversal algorithms in JavaScript?
+How does the 'event loop' in JavaScript impact the execution of algorithms?
+
+Practical Questions:
+
+Write a function in JavaScript to implement a binary search algorithm.
+Write an algorithm in JavaScript to sort an array using the quicksort algorithm.
+Demonstrate a JavaScript function that uses dynamic programming to solve the knapsack problem.
+Show how to implement a depth-first search algorithm on a tree data structure in JavaScript.
+Write a JavaScript function that uses recursion to find the factorial of a number.
+Write an algorithm to find the shortest path between two nodes in a graph in JavaScript.
+Implement a function in JavaScript that uses memoization to optimize a Fibonacci sequence generator.
+Demonstrate how to use a callback function in JavaScript to implement a specific algorithm.
+Show how to handle promises in JavaScript when dealing with asynchronous functions in an algorithm.
+Implement an efficient sorting algorithm in JavaScript and explain why it is efficient.
+Write a function to detect a loop in a linked list in JavaScript.
+Write an algorithm in JavaScript to implement breadth-first search in a graph.
+Create a JavaScript function that calculates the nth number in a Fibonacci sequence using an iterative method.
+Demonstrate a divide and conquer algorithm in JavaScript with a function that performs binary search on a sorted array.
+Write an efficient algorithm in JavaScript to find the common elements in two arrays.
+Demonstrate a function that uses AJAX to fetch data asynchronously and process it using a specific algorithm.
+Write a JavaScript algorithm to solve a real-world problem of your choice. Explain your solution.
+Create a JavaScript function to merge two sorted lists. Discuss its time complexity.
+Write a function in JavaScript that uses closures to maintain state between function calls.
+Create a greedy algorithm in JavaScript that solves a real-world optimization problem.
+Write a function to implement heap sort in JavaScript.
+Implement a function that recursively traverses a JSON object in JavaScript.
+Write a JavaScript function to implement the Tower of Hanoi problem.
+Implement an algorithm in JavaScript to check if a string is a palindrome.
+Show how JavaScript can be used to implement the algorithm for breadth-first search in a binary tree.
