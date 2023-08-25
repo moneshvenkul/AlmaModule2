@@ -1,0 +1,65 @@
+// // function search(arr, val) {
+// //   for (let i = 0; i < arr.length; i++) {  //n we are searching for n numbers
+// //     if (arr[i] === val) {
+// //       return i; //position
+// //     }
+// //   }
+// //   return -1; //not found
+// // }
+
+// // console.log(search(
+// //     [5,4,8,7,9,3,6], //array
+// //     7 //number to find
+// //     ))
+
+// //     //searching for 5 - best case - Omega Ω(1)
+// //     //searching for 7 - average case - Theta Θ(n)
+// //     //searching for 6 - worst case - Big O(n)
+
+
+// //     // apple, mango, orange, pineapple
+
+// let names1 = [] //Array literal
+// let names2 = new Array() //Array Constructor
+
+// let fruits = ["apple","mango","pineapple","banana"] //one dimensional array
+
+// let shop = [fruits,[chips,chocolates]]
+// let shop1 = [fruits,[chips,chocolates]] //2d
+
+// let shops = [shop,fruits,shop1]  // multiDimensional
+// // =[[fruits,[chips,chocolates]], ["apple","mango","pineapple","banana"], [fruits,[chips,chocolates]] ] 
+
+
+// let matrix = [
+//     [1,  2,  3],
+//     [4,  5,  6],
+//     [7,  8,  9],
+//       [10, 11, 12]
+//   ];
+
+// console.log(matrix[2][2])
+
+// for (let i = 0; i < matrix.length; i++) {
+//     for (let j = 0; j < matrix[i].length; j++) {
+//       console.log(matrix[i][j]);
+//     }
+//   }
+
+
+// Removing spaces from the string
+function removeSpaces(string) {
+    let newString = "";
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] !== " ") {
+        newString += string[i];
+      }
+    }
+    return newString;
+  }
+  
+  // Output
+  const string = "Hello, there!";
+  const newString = removeSpaces(string);
+  
+  console.log(newString); // Output: "Hello,there!"
